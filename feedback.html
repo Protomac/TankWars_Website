@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback Form</title>
+	<link rel="stylesheet" type="text/css" href="feedback.css">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+<body>
+	<div id="container">
+			<h1>YOUR FEEDBACK</h1>
+			<hr>
+			 
+				<h3>NAME*</h3>
+				<input type="text" name="NAME" id="NAME" placeholder="John Wick" required autocomplete="off" />
+				<h3>EMAIL*</h3>
+				<input type="email"  id="Email" placeholder="abc@blah.com" required autocomplete="off" />
+				<h3>How do you like our website:</h3>
+				<div id="emoji">
+					<button id="emot1"><img src="cry.png" onclick="checkValid()"></button>
+					<button id="emot2"><img src="hug.png" onclick="checkValid()"></button>
+					<button id="emot3"><img src="wow.png" onclick="checkValid()"></button>
+					<button id="emot4"><img src="heart.png" onclick="checkValid()"></button>
+				</div>
+				<h3>Feedback to creators:</h3>
+				<textarea id="review" placeholder="Enter your text here....."></textarea>
+				<br>
+				<input type="submit" id="submit" onclick="display()">
+				<script type="text/javascript" src="feedback.js"></script>
+			
+	</div>	
+
+</body>
+</html>

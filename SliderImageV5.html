@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SliderImage</title>
+	<script type="text/javascript" src="mai.js"></script>
+	<style type="text/css">
+		body {
+			perspective: 1500px;
+			background-color: black;
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
+		img {
+			/*height: 533px;
+			width: 1082px;*/
+			height: 90%;
+			width: 90%;
+			transition: 1s;
+			box-shadow: 0px 0px 10px 5px black;
+		}
+		div {
+  			width: 100%;
+		}
+
+		#L {
+			position: absolute;
+			z-index: 2;
+			top: 47.5%;
+			left: 97%;
+			font-size: 50px;
+			color: white;
+			background: transparent;
+			border-color: yellow;
+			border-radius: 10px;
+			font-family: cursive;
+		}
+
+		#R {
+			position: absolute;
+			z-index: 2;
+			top: 47.5%;
+			left: 0%;
+			font-size: 50px;
+			color: white;
+			background: transparent;
+			border-color: yellow;
+			border-radius: 10px;
+			font-family: cursive;
+		}
+
+		#hidden {
+			
+			position: relative;
+			left: 1px;
+			z-index: -2;
+			opacity: 0.0;
+		}
+
+		#SI_img1 {
+			
+			position: absolute;
+			left: 5%;
+			top: 5%;
+			z-index: -2;
+			transform: translateX(-900px) rotateY(90deg);
+		}
+		#SI_img2 {
+			position: absolute;
+			left: 5%;
+			top: 5%;
+			z-index: -1;
+			transform: translateX(-450px) rotateY(45deg);
+		}
+		#SI_img3 {
+			position: absolute;
+			left: 5%;
+			top: 5%;
+			z-index: 0;
+
+		}
+		#SI_img4 {
+			position: absolute;
+			left: 5%;
+			top: 5%;
+			z-index: -1;
+			transform: translateX(450px) rotateY(-45deg);
+		}
+		#SI_img5 {
+			position: absolute;
+			left: 5%;
+			top: 5%;
+			z-index: -2;
+			transform: translateX(900px) rotateY(-90deg);
+		}
+	</style>
+</head>
+<body onload="Init()">
+	<div>
+		<form>
+			<input type="button" name="clickMe" value=">" onclick="Slider(1)" id="L">
+			<input type="button" name="clickMe" value="<" onclick="Slider(-1)" id="R">
+		</form>
+		<img src="background.jpg" id="hidden">
+
+		<img src="SI_img1.jpg" id="SI_img1">
+		<img src="SI_img2.jpg" id="SI_img2">
+		<img src="SI_img3.jpg" id="SI_img3">
+		<img src="SI_img4.jpg" id="SI_img4">
+		<img src="SI_img5.jpg" id="SI_img5">
+	</div>
+	
+</body>
+</html>

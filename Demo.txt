@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	
+    overflow-x: hidden;
+}
+
+#myDIV {
+  position: relative;
+  height: 200px;
+  width: 700px;
+  background-color: lightblue;
+  transition: 2s;
+  
+}
+
+img {
+	float: left;
+	height: 100px;
+    width: 200px;
+    
+}
+
+#data {
+	position: absolute;
+    left: 200px;
+    height: 100px;
+    width: 200px;
+    transition: 2s;
+    overflow: hidden;
+    white-space: normal;
+}
+
+#data:hover {
+	z-index: 2;
+    width: 600px;
+    transform: translateX(-200px);
+}
+
+#data1 {
+	position: absolute;
+    left: 0px;
+    height: 100px;
+    width: 200px;
+    z-index: 1;
+    white-space: normal;
+}
+
+#data2 {
+	position: absolute;
+    left: 400px;
+    height: 100px;
+    width: 200px;
+    z-index: 1;
+    white-space: normal;
+}
+
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+
+
+<div id="data1">
+aaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaa aaaaa aaa </div>
+
+<div id="data"><img src="img_chania.jpg" onmouseover="myFunction()">
+<div>This is my DIV element.<br>Click the "Try it" button to toggle between hiding and showing the DIV element:</div></div>
+
+<div id="data2"><img src="img_chania.jpg" onmouseover="myFunction()">
+</div>
+
+
+</div>
+
+<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("data");
+  
+  //sleep(100);
+  //x.style.transform = "translateX(0px) scale(1,1)";
+  
+}
+</script>
+
+</body>
+</html>
+
