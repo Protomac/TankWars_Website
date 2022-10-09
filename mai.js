@@ -11,31 +11,29 @@ function NavMenu() {
 }
 
 
-window.onload=Init;
-function myMove() {   
+window.onload = Init;
+function myMove() {
 	navcheck = setInterval(NavMenu, 1000);
-var elem = document.getElementById("balloftank");
-let pos = 0;   
-var id = setInterval(frame, 10);
-console.log(elem.id); 
-function frame()  
-    {
-if (pos ==97)    
-     {
-          document.getElementById('balloftank').style.display='none';
-    			document.getElementById('spanidofgame').style.visibility='visible';
-      		clearInterval(id);
-    		} 
-    		else
-          {pos++;
-    				 
-             elem.style.left = pos + "px"; 
-              
-      						 
-       
-      						}
-  	}
- }
+	var elem = document.getElementById("balloftank");
+	let pos = 0;
+	var id = setInterval(frame, 10);
+	console.log(elem.id);
+	function frame() {
+		if (pos == 97) {
+			document.getElementById('balloftank').style.display = 'none';
+			document.getElementById('spanidofgame').style.visibility = 'visible';
+			clearInterval(id);
+		}
+		else {
+			pos++;
+
+			elem.style.left = pos + "px";
+
+
+
+		}
+	}
+}
 
 //mayank part 
 x = 0;	//refer to objects
@@ -45,7 +43,7 @@ function Init() {
 	img = [new SI(90, "SI_img1"), new SI(45, "SI_img2"), new SI(0, "SI_img3"), new SI(-45, "SI_img4"), new SI(-90, "SI_img5")];
 }
 auto = setInterval(Slider, 5000, 1);
-function Slider(a){
+function Slider(a) {
 	addi = a * addi;
 	//img[x].move();
 	tim = setInterval(tr, 10);
@@ -53,32 +51,32 @@ function Slider(a){
 
 function tr() {
 	if (x < 5) {
-			img[x].move();
-			x++;
-		}
-		else {
-			x = 0;
-			addi = 45;
-			clearInterval(tim);
-		}
+		img[x].move();
+		x++;
+	}
+	else {
+		x = 0;
+		addi = 45;
+		clearInterval(tim);
+	}
 }
 
 class SI {
 
-	constructor(current, name){
+	constructor(current, name) {
 		this.current = current;
 		this.i = document.getElementById(name);
 	}
 
 	move() {
 		alert("abbb");
-		this.i.style.transform = "translateX("+(-20*(this.current + addi))+"px) rotateY("+(this.current + addi)+"deg)";
+		this.i.style.transform = "translateX(" + (-20 * (this.current + addi)) + "px) rotateY(" + (this.current + addi) + "deg)";
 		//this.i.style.transform = "rotateY("+(this.current + addi)+"deg)";
-		
+
 		this.current = this.current + addi;
 		//this.i.style.zIndex = "-1";
-		if (this.current == 0) {this.i.style.zIndex = "1";}
-		else {this.i.style.zIndex = "-1";}
+		if (this.current == 0) { this.i.style.zIndex = "1"; }
+		else { this.i.style.zIndex = "-1"; }
 		this.check();
 	}
 
