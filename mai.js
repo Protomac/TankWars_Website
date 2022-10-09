@@ -15,7 +15,7 @@ window.onload=Init;
 function myMove() {   
 	navcheck = setInterval(NavMenu, 1000);
 var elem = document.getElementById("balloftank");
-var pos = 0;   
+let pos = 0;   
 var id = setInterval(frame, 10);
 console.log(elem.id); 
 function frame()  
@@ -71,7 +71,7 @@ class SI {
 	}
 
 	move() {
-		//alert("abbb");
+		alert("abbb");
 		this.i.style.transform = "translateX("+(-20*(this.current + addi))+"px) rotateY("+(this.current + addi)+"deg)";
 		//this.i.style.transform = "rotateY("+(this.current + addi)+"deg)";
 		
